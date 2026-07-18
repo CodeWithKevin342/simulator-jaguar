@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Científico: Óptica del Jaguar</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<!-- Iniciamos en Vista Humana por defecto para notar el impacto al cambiar -->
+<body class="modo-humano">
+
+    <!-- Panel de controles en la esquina superior derecha -->
+    <div class="controles-panel">
+        <button id="btn-humano" class="btn-control activo">Vista Humana</button>
+        <button id="btn-jaguar-dia" class="btn-control">Jaguar (Día)</button>
+        <button id="btn-jaguar-noche" class="btn-control">Jaguar (Noche)</button>
+    </div>
+
+    <!-- Visor de la Cámara -->
+    <div class="visor-camara">
+        <video autoplay muted loop playsinline id="video-selva" class="video-fondo">
+            <source src="./imagenes/Tapir y su cría (Tapirus terrestris).mp4" type="video/mp4">
+            Tu navegador no soporta reproducción de video local.
+        </video>
+    </div>
+
+    <!-- Capa Óptica que genera los filtros físicos -->
+    <div class="capa-optica"></div>
+
+    <!-- HUD Informativo -->
+    <div class="hud-cientifico" id="hud-texto">
+        <p><strong>MODO:</strong> VISTA HUMANA (Homo sapiens)</p>
+        <p><strong>ESPECTRO:</strong> TRICROMÁTICO (RGB COMPLETO)</p>
+        <p><strong>ÓPTICA:</strong> ENFOQUE CRISTALINO ESTÁNDAR</p>
+        <p><strong>RESOLUCIÓN:</strong> ALTA DEFINICIÓN LUZ DÍA</p>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
